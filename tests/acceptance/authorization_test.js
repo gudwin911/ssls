@@ -23,9 +23,9 @@ Scenario('registered user successfully log in and see user email', async () => {
     I.seeElement(Header.userStatusDropdown);
 });
 
-Scenario('login with not registered and see error message', async () => {
+Scenario('login with not registered user and see error message', async () => {
     Header.clickHeaderLogin();
-    AuthorizationPage.loginWith('ssls.automation@gmail.com', '123');
+    AuthorizationPage.loginWith('automation@gmail.com', '123');
     I.waitForVisible(AuthorizationPage.errorPopup);
     assert.equal(await I.grabTextFrom(AuthorizationPage.errorPopup), 'Uh oh! Email or password is incorrect');
 });

@@ -1,4 +1,4 @@
-const {I, Header, HomePage, AuthorizationPage, ProfilePage} = inject();
+const {I, Header, AuthorizationPage, ProfilePage} = inject();
 const assert = require('assert');
 
 Feature('My profile page tests');

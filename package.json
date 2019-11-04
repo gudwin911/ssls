@@ -4,8 +4,9 @@
   "description": "Test project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test:acceptance": "codeceptjs run"
+    "test": "codeceptjs run",
+    "test:steps": "codeceptjs run --steps",
+    "test:allure": "rm -rf output/* && codeceptjs run --plugins allure && allure serve output"
   },
   "keywords": [],
   "author": "",

@@ -16,7 +16,7 @@ exports.config = {
             capabilities: {
                 chromeOptions: {
                     w3c: false,
-                    args: [/*'--headless',*/ '--disable-gpu', '--window-size=1920x1080', '--no-sandbox']
+                    args: ['--headless', '--disable-gpu', '--window-size=1920x1080', '--no-sandbox']
                 }
             },
             restart: false,
@@ -30,11 +30,13 @@ exports.config = {
     include: {
         I: './steps/steps_file.js',
         Header: './fragments/header.js',
+        Filters: './fragments/filters.js',
         HomePage: './pages/HomePage.js',
         AuthorizationPage: './pages/AuthorizationPage.js',
         ProfilePage: './pages/ProfilePage.js',
     },
     plugins: {
+        allure: {},
         wdio: {
             enabled: true,
             services: ['selenium-standalone']

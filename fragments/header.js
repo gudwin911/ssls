@@ -7,6 +7,7 @@ module.exports = {
     userStatusDropdown: '.user-box button[nc-dropdown-trigger="statusOpened"]',
     logoutButton: 'button[ng-click="$ctrl.logout()"]',
     profileButton: 'a[href="/user/profile"]',
+    searchIcon: '.icon-search',
 
     clickHeaderLogin() {
         I.click(this.loginButton)
