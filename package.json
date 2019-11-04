@@ -4,9 +4,10 @@
   "description": "Test project",
   "main": "index.js",
   "scripts": {
-    "test": "codeceptjs run",
-    "test:steps": "codeceptjs run --steps",
-    "test:allure": "rm -rf output/* && codeceptjs run --plugins allure && allure serve output"
+    "test": "codeceptjs run --plugins allure",
+    "test:steps": "codeceptjs run --steps --plugins allure",
+    "allure": "allure serve output",
+    "clean": "rm -rf output/*"
   },
   "keywords": [],
   "author": "",
