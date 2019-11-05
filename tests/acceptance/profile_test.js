@@ -37,4 +37,6 @@ Scenario('refresh support pin', async () => {
     I.waitForVisible(ProfilePage.dataLoading);
     I.waitForInvisible(ProfilePage.dataLoading);
     I.dontSee(oldPin, ProfilePage.userPinSelector);
+    let newPin = await I.grabTextFrom(ProfilePage.userPinSelector);
+    assert.ok(newPin);
 });
