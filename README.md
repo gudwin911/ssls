@@ -27,4 +27,4 @@ $ yarn install
 * `$ yarn allure` - creates allure report
 * `$ yarn clean` - cleans output directory with test artifacts
 
-By default tests are running in headless mode. To run the in regular mode just remove `--headless` arg in `codecept.conf.js` in ChromeOptions (string 19)
+By default tests are running in headless mode. To run them in regular mode just remove `--headless` arg in `codecept.conf.js` in ChromeOptions (string 19)
