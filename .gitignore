@@ -1,0 +1,12 @@
+# Default ignored files
+# dependencies
+/node_modules
+# IDE
+/.idea
+/misc.xml
+/modules.xml
+/vcs.xml
+/workspace.xml
+/ssls.iml
+# tests output
+/output
