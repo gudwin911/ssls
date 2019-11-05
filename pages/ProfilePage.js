@@ -1,14 +1,12 @@
-const {I} = inject();
-
 module.exports = {
 
-    userDataSelector: '//div[@class="item"][contains(., "{0}")]/div[@class="description"]',
+    userNameSelector: locate('.description').inside('[ng-class*="activeRow === \'name\'"]'),
+    userEmailSelector: locate('.description').inside('[ng-class*="activeRow === \'email\'"]'),
+    userPassSelector: locate('.description').inside('[ng-class*="activeRow === \'password\'"]'),
+    userPhoneSelector: locate('.description').inside('[ng-class*="activeRow === \'phone\'"]'),
+    userAddressSelector: locate('.description').inside('[ng-class*="activeRow === \'address\'"]'),
+    userPinSelector: locate('.description').inside('[ng-class*="activeRow !== \'pin\'"]'),
     newsCheckbox: '[name="newsletterOn"]',
     refreshPinButton: '[name="supportPin"]',
-    dataLoading: '.disabled',
-
-    grabUserDataValue(dataName) {
-        let selector = this.userDataSelector.replace('{0}', dataName);
-        return I.grabTextFrom(selector);
-    }
+    dataLoading: '.disabled'
 };
