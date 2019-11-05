@@ -6,9 +6,6 @@ exports.config = {
     timeout: 10000,
     output: './output',
     helpers: {
-        CustomHelper: {
-            require: './helpers/custom_helper.js'
-        },
         WebDriver: {
             url: 'https://www.sbzend.ssls.com/',
             smartWait: 5000,

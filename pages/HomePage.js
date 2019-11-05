@@ -1,4 +1,5 @@
 const {I} = inject();
+const assert = require('assert');
 
 module.exports = {
 
@@ -7,9 +8,8 @@ module.exports = {
     searchField: '.ssls-input',
 
     async productsContain(text) {
-        let num = await I.getNumberOfVisibleElements(this.product);
-        for (let i = 1; i <= num; i++) {
-            I.see(text, this.product + `:nth-of-type(${i})`);
+        for (const product of await I.grabTextFrom(this.product)) {
+            assert.ok(product.includes(text))
         }
     }
 };
