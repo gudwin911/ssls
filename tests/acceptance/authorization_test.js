@@ -13,13 +13,13 @@ Scenario('registered user successfully log in and see user email', async () => {
 
     I.see('SSL made easy', HomePage.title);
     Header.clickHeaderLogin();
-    I.see('Authorization', AuthorizationPage.title)
+    I.see('Authorization', AuthorizationPage.title);
     AuthorizationPage.fillEmail(email);
     AuthorizationPage.fillPassword(password);
     AuthorizationPage.clickEyeIcon();
     assert.equal(await I.grabValueFrom(AuthorizationPage.passwordField), '123456');
     AuthorizationPage.clickLogin();
-    I.see('ssls.automation+666@gmail.com', Header.userPathButton);
+    I.see(email, Header.userPathButton);
     I.seeElement(Header.userStatusDropdown);
 });
 

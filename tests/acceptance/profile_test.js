@@ -17,6 +17,7 @@ Scenario('check user profile values', async () => {
     let phone = await ProfilePage.grabUserDataValue('Phone');
     let address = await ProfilePage.grabUserDataValue('Address');
     let pin = await ProfilePage.grabUserDataValue('Support pin');
+    let newsletter = (await I.grabAttributeFrom(ProfilePage.newsCheckbox, 'checked')).toString();
     Header.logout();
 
     AuthorizationPage.loginWith();
@@ -27,6 +28,7 @@ Scenario('check user profile values', async () => {
     assert.equal(await ProfilePage.grabUserDataValue('Phone'), phone, 'Phone is not equal');
     assert.equal(await ProfilePage.grabUserDataValue('Address'), address, 'Address is not equal');
     assert.equal(await ProfilePage.grabUserDataValue('Support pin'), pin, 'Support pin is not equal');
+    newsletter ? I.seeCheckboxIsChecked(ProfilePage.newsCheckbox) : I.dontSeeCheckboxIsChecked(ProfilePage.newsCheckbox);
 });
 
 Scenario('refresh support pin', async () => {
