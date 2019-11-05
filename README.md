@@ -5,7 +5,7 @@
 ### Requirements
 
 Before starting, make sure you have on your workstation:
-- latest JDK (might be installed by [brew](https://brew.sh/) on macOS `brew cask install java`)
+- latest JDK (might be installed by [brew](https://brew.sh/) on macOS `brew cask install java`, also needs to allow apps downloading from indefined developers at System Preferences -> Security & Privacy)
 - [chrome](http://www.google.com/chrome) browser
 
 ### Project configuration
