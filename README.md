@@ -5,7 +5,7 @@
 ### Requirements
 
 Before starting, make sure you have on your workstation:
-- latest JDK (might be quickly installed by [brew](https://brew.sh/) on macOs `brew cask install java`)
+- latest JDK (might be quickly installed by [brew](https://brew.sh/) on macOS `brew cask install java`)
 - [chrome](http://www.google.com/chrome) browser
 
 ### Project configuration
@@ -16,9 +16,15 @@ Start by cloning this project on your workstation.
 $ git clone https://github.com/gudwin911/ssls.git
 ```
 
-The next thing will be to install all the dependencies of the project using [Yarn](https://yarnpkg.com/en/):
+The next thing will be to install codeceptjs and selenium service using [npm](https://www.npmjs.com/get-npm):
 ```bash
 $ cd ./ssls
+$ npm install codeceptjs webdriverio --save-dev
+$ npm i @wdio/selenium-standalone-service --save
+```
+
+(Optional) The next thing might need to install all the dependencies of the project using [Yarn](https://yarnpkg.com/en/):
+```bash
 $ yarn install
 ```
 
