@@ -23,7 +23,7 @@ $ npm install codeceptjs webdriverio --save-dev
 $ npm i @wdio/selenium-standalone-service --save
 ```
 
-(Optional) The next thing might need to install all the dependencies of the project using [Yarn](https://yarnpkg.com/en/):
+The next thing you will need to install/update all the dependencies of the project using [Yarn](https://yarnpkg.com/en/):
 ```bash
 $ yarn install
 ```
